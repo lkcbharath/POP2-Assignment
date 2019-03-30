@@ -1,0 +1,3 @@
+rm a.out
+rm OOP_Search.class
+rm LinearSearchObject.class
