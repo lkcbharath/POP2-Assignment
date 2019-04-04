@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Search in the array </h2>
+<button onclick="SearchFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+//JavaScript-C24.2.0 (SpiderMon
+function SearchFunction(){
+n = parseInt(prompt("enter number of elements in array "))
+var a = []
+
+var t;
+for(var i=0; i<n; i++)
+    {
+        a[i]=parseInt(prompt("Enter array elements"));
+    }
+    var k=parseInt(prompt("Enter the key element to search: "));
+    for(var i=0; i<a.length; i++)
+    {
+        if(k==a[i])
+        {
+            t=1;
+            break;
+        }
+    }
+    if(t==1)
+    {
+        document.writeln("Element "+a[i]+ " Found at Position:"+i);
+    }
+    else
+    {
+        document.writeln("Element Not Found");
+    }
+   }
+</script>
+
+</body>
+</html>
+
