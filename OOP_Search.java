@@ -1,14 +1,19 @@
 import java.util.*;
 import java.io.*; 
 
-class LinearSearchObject {
+interface LinearSearch {
+    int search(int item);
+}
+
+class LinearSearchObject implements LinearSearch {
     private int[] numbers;
 
     LinearSearchObject(int[] numbers){
         this.numbers = numbers;
     }
 
-    int search(int item) {
+    @Override
+    public int search(int item) {
         int i;
         int n = this.numbers.length;
         for (i=0;i<n;++i){
@@ -28,6 +33,10 @@ class OOP_Search {
 
         System.out.println("Enter the size of the array of integers: ");
         n = scan.nextInt();
+        if (n<1){
+            System.out.println("Invalid size entered.");
+            System.exit(0);
+        }
         int arr[] = new int[n];
         System.out.println("Enter the array of integers: ");
         for (i=0;i<n;++i){

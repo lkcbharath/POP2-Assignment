@@ -1,7 +1,7 @@
 (defun linear-search (list item)
   (loop for pos from 0 and element in list
-        when (eql item element)
-          do (return pos)))
+    when (eql item element)
+      do (return pos)))
 
 (format t "Enter the list of integers: ")
 (setq list (read-from-string (concatenate 'string "(" (read-line) ")")))
